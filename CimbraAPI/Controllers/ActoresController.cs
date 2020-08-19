@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 namespace CimbraAPI.Controllers
 {
     [ApiController]
-    [Route("api/pics")]
+    [Route("api/photos")]
     public class ActoresController : ControllerBase
     {
         private readonly ApplicationDbContext context;
