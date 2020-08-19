@@ -49,7 +49,7 @@ namespace CimbraAPI.Controllers
 
 
         [HttpPost]
-        public async Task<ActionResult> Post([FromBody] ActorCreacionDTO actorCreacionDTO)
+        public async Task<ActionResult> Post([FromForm] ActorCreacionDTO actorCreacionDTO)
         {
             var entidad = mapper.Map<Actor>(actorCreacionDTO);
             context.Add(entidad);
@@ -60,7 +60,7 @@ namespace CimbraAPI.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<ActionResult> Put(int id, [FromBody] ActorCreacionDTO actorCreacionDTO)
+        public async Task<ActionResult> Put(int id, [FromForm] ActorCreacionDTO actorCreacionDTO)
         {
             var entidad = mapper.Map<Actor>(actorCreacionDTO);
             entidad.Id = id;

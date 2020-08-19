@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CimbraAPI.Validaciones;
+using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -13,7 +15,8 @@ namespace CimbraAPI.DTOs
 
         public string Nombre { get; set; }
         public DateTime FechaNacimiento { get; set; }
-
-        //public string Foto { get; set; }
+        [PesoArchivoValidacion(PesoMaximoEnMegaBytes: 4)]
+        [TipoArchivoValidacion(grupoTipoArchivo:GrupoTipoArchivo.Imagen)]
+        public IFormFile Foto { get; set; }
     }
 }
