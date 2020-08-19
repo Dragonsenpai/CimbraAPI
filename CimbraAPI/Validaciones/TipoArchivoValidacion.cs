@@ -18,7 +18,8 @@ namespace CimbraAPI.Validaciones
 
         public TipoArchivoValidacion(GrupoTipoArchivo grupoTipoArchivo)
         {
-            if (grupoTipoArchivo == GrupoTipoArchivo.Imagen) {
+            if (grupoTipoArchivo == GrupoTipoArchivo.Imagen)
+            {
                 tiposValidos = new string[] { "image/jpeg", "image/png", "image/gif" }; 
             }
         }

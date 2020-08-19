@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using CimbraAPI.DTOs;
 using CimbraAPI.Entidades;
+using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,8 @@ namespace CimbraAPI.Helpers
             CreateMap<GeneroCreacionDTO, Genero>().ReverseMap();
 
             CreateMap<Actor, ActorDTO>().ReverseMap();
-            CreateMap<ActorCreacionDTO, Actor>();
+            CreateMap<ActorCreacionDTO, Actor>()
+                .ForMember(x => x.Foto, options => options.Ignore());
 
         }
     }

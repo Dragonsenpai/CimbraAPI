@@ -16,7 +16,7 @@ namespace CimbraAPI.DTOs
         public string Nombre { get; set; }
         public DateTime FechaNacimiento { get; set; }
         [PesoArchivoValidacion(PesoMaximoEnMegaBytes: 4)]
-        [TipoArchivoValidacion(grupoTipoArchivo:GrupoTipoArchivo.Imagen)]
+        [TipoArchivoValidacion(grupoTipoArchivo: GrupoTipoArchivo.Imagen)]
         public IFormFile Foto { get; set; }
     }
 }
